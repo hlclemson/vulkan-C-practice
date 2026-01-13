@@ -30,6 +30,8 @@ int main(void) {
 }
 
 void initWindow(App *pApp) {
+  // force X11 fallback
+  glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_X11);
   glfwInit();
 
   glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
